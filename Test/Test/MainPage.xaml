@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Test"
+             x:Class="Test.MainPage">
+
+    <StackLayout Margin="10, 5, 5, 5">
+        <Label Text="Replace with autocart logo"
+           VerticalTextAlignment="Center"
+           VerticalOptions="CenterAndExpand"
+           HorizontalOptions="CenterAndExpand"/>
+
+            <Entry Placeholder="Email"/>
+        <Entry Placeholder="Password" IsPassword="True"/>
+        <Grid Margin="5, 5, 5, 5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button 
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Login"
+                BackgroundColor="SkyBlue"/>
+            <Button 
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="Register"
+                BackgroundColor="LightGray"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
