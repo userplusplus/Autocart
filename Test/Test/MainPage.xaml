@@ -10,7 +10,7 @@
            VerticalOptions="CenterAndExpand"
            HorizontalOptions="CenterAndExpand"/>
 
-            <Entry Placeholder="Email"/>
+        <Entry Placeholder="Email"/>
         <Entry Placeholder="Password" IsPassword="True"/>
         <Grid Margin="5, 5, 5, 5">
             <Grid.RowDefinitions>
@@ -24,7 +24,8 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 Text="Login"
-                BackgroundColor="SkyBlue"/>
+                BackgroundColor="SkyBlue"
+                Clicked="LoginButtonClicked"/>
             <Button 
                 Grid.Row="0"
                 Grid.Column="1"

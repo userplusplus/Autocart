@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Test.Pages;
 
 namespace Test
 {
@@ -12,6 +13,11 @@ namespace Test
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void LoginButtonClicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NavigationPage (new LinkPage());
         }
     }
 }
