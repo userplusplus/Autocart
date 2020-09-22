@@ -14,7 +14,7 @@
                     <ViewCell.View>
                         <Grid Padding="5">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="120"/>
+                                <RowDefinition Height="110"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="0.2*"/>
@@ -27,27 +27,13 @@
                                 HeightRequest="60"
                                 WidthRequest="60" />
 
-                            <StackLayout Grid.Column="1" Spacing="3" HorizontalOptions="Center" VerticalOptions="Center">
-                                <Label 
-                                    Text="{Binding .}"
-                                    FontAttributes="Bold"/>
-                                <Label 
-                                    Text="Discount: "/>
-                                <Label 
-                                    Text="Price: "/>
-                                <Label 
-                                    Text="Quantity: "/>
-                                <Label 
-                                    Text="Cost: "/>
-                            </StackLayout>
-                            <!--
                             <Grid Grid.Column="1" Padding="1">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="15" />
-                                    <RowDefinition Height="15" />
-                                    <RowDefinition Height="15" />
-                                    <RowDefinition Height="15" />
-                                    <RowDefinition Height="15" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -64,7 +50,7 @@
                                     Text="Quantity: "/>
                                 <Label Grid.Row="4"
                                     Text="Cost: "/>
-                            </Grid> -->
+                            </Grid>
 
                             <Button Grid.Column="2"
                                 Text="Edit"
