@@ -4,10 +4,34 @@
              x:Class="Test.Pages.LoyaltyCardPage"
              Title="Loyalty Card">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout IsVisible="True">
+            
+            <Entry Placeholder="Card Number"/>
+            <Entry Placeholder="Card holder"/>
+            
+            <Grid Margin="5, 5, 5, 5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Button 
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Add Card"
+                    BackgroundColor="SkyBlue"
+                    Clicked="AddCardClicked"/>
+                <Button 
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Remove Card"
+                    BackgroundColor="LightGray"
+                    Clicked="RemoveCardClicked"/>/>
+                
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

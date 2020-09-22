@@ -16,5 +16,15 @@ namespace Test.Pages
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void AddCardClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RemoveCardClicked(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
