@@ -12,21 +12,35 @@
             <DataTemplate>
                 <ViewCell >
                     <ViewCell.View>
-                    <Grid Padding="5">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="100"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.2*"/>
-                            <ColumnDefinition Width="0.55*" />
-                            <ColumnDefinition Width="0.25*" />
-                        </Grid.ColumnDefinitions>
+                        <Grid Padding="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="120"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.2*"/>
+                                <ColumnDefinition Width="0.55*" />
+                                <ColumnDefinition Width="0.25*" />
+                            </Grid.ColumnDefinitions>
 
-                        <Image Source="null"
-                           Aspect="AspectFill"
-                           HeightRequest="60"
-                           WidthRequest="60" />
+                            <Image Source="null"
+                                Aspect="AspectFill"
+                                HeightRequest="60"
+                                WidthRequest="60" />
 
+                            <StackLayout Grid.Column="1" Spacing="3" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label 
+                                    Text="{Binding .}"
+                                    FontAttributes="Bold"/>
+                                <Label 
+                                    Text="Discount: "/>
+                                <Label 
+                                    Text="Price: "/>
+                                <Label 
+                                    Text="Quantity: "/>
+                                <Label 
+                                    Text="Cost: "/>
+                            </StackLayout>
+                            <!--
                             <Grid Grid.Column="1" Padding="1">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="15" />
@@ -50,13 +64,13 @@
                                     Text="Quantity: "/>
                                 <Label Grid.Row="4"
                                     Text="Cost: "/>
-                            </Grid>
+                            </Grid> -->
 
-                        <Button Grid.Column="2"
-                            Text="Edit"
-                            BackgroundColor="YellowGreen"
-                            Margin="2"/>
-                    </Grid>
+                            <Button Grid.Column="2"
+                                Text="Edit"
+                                BackgroundColor="YellowGreen"
+                                Margin="2"/>
+                        </Grid>
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>

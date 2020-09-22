@@ -4,7 +4,7 @@
              x:Class="Test.Pages.LoyaltyCardPage"
              Title="Loyalty Card">
     <ContentPage.Content>
-        <StackLayout IsVisible="True">
+        <StackLayout Margin="5">
             
             <Entry Placeholder="Card Number"/>
             <Entry Placeholder="Card holder"/>
