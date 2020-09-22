@@ -29,8 +29,8 @@
                     Grid.Column="1"
                     Text="Remove Card"
                     BackgroundColor="LightGray"
-                    Clicked="RemoveCardClicked"/>/>
-                
+                    Clicked="RemoveCardClicked"/>
+
             </Grid>
         </StackLayout>
     </ContentPage.Content>

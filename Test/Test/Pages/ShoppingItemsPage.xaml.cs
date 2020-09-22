@@ -25,7 +25,7 @@ namespace Test
                 "Cornflakes"
             };
 			
-			MyListView.ItemsSource = Items;
+			ShoppingItems.ItemsSource = Items;
         }
 
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
