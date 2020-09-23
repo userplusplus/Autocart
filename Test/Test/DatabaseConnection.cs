@@ -6,6 +6,7 @@ namespace Test
 {
     public interface DatabaseConnection
     {
-        SQLite.SQLiteConnection DbConnection();
+        //SQLite.SQLiteConnection DbConnection();
+        SQLite.SQLiteAsyncConnection DbConnection();
     }
 }
