@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.ComponentModel;
-using SQLite;
+﻿using SQLite;
 
 namespace Test.Models
 {
     [Table("user")]
-    class User
+    internal class User
     {
         private int _id;
+
         [PrimaryKey, AutoIncrement, Column("id")]
         public int Id
         {
@@ -19,6 +16,7 @@ namespace Test.Models
         }
 
         private string _email;
+
         [NotNull, MaxLength(100), Column("email")]
         public string Email
         {
@@ -28,6 +26,7 @@ namespace Test.Models
         }
 
         private string _password;
+
         [NotNull, MaxLength(100), Column("password")]
         public string Password
         {

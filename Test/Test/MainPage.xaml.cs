@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Test.DataAccess;
+using Test.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Test.Pages;
-using Test.Models;
-using Test.DataAccess;
 
 namespace Test
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
-        UserDataAccess dataAccess;
+        private UserDataAccess dataAccess;
         private string email;
         private string password;
 
@@ -41,7 +36,6 @@ namespace Test
                     await DisplayAlert("Login Error", "No user was found with that email.", "OK");
                     return;
                 }
-
                 else if (user.Password == password)
                 {
                     //Go to next page
@@ -72,7 +66,7 @@ namespace Test
                     await DisplayAlert("Registration Error", "Password needs to be longer than 6 characters long.", "OK");
                 }
                 //check for taken email
-                else if(this.dataAccess.GetUser(email).Email != null)
+                else if (this.dataAccess.GetUser(email).Email != null)
                 {
                     await DisplayAlert("Registration Error", "This email is already in use, please log in.", "OK");
                 }
@@ -81,7 +75,6 @@ namespace Test
                     this.dataAccess.AddNewUser(email, password);
                     await DisplayAlert("Registration Success", "email:" + email + "/npassword:" + password, "OK");
                 }
-                
             }
             catch
             {

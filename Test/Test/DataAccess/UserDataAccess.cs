@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SQLite;
+using System;
 using System.Collections.ObjectModel;
 using Test.Models;
-using SQLite;
-using System.Linq;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Test.DataAccess
 {
-    class UserDataAccess
+    internal class UserDataAccess
     {
         private SQLiteConnection database;
         private static object collisionLock = new object();
@@ -24,7 +20,7 @@ namespace Test.DataAccess
         }
 
         //Create a new user/register
-        public async void AddNewUser(string email, string password)
+        public void AddNewUser(string email, string password)
         {
             /*this.Users.Add(new User
             {
@@ -32,14 +28,15 @@ namespace Test.DataAccess
                 Password = password
             });*/
 
-            var user = new User {
+            var user = new User
+            {
                 Email = email,
                 Password = password
-                };
+            };
 
-            await database.InsertAsync(stock);
+            database.Insert(user);
 
-            Console.WriteLine("Auto stock id: {0}", stock.Id);
+            Console.WriteLine("Auto stock id: {0}", user.Id);
         }
 
         //Check for user using email
@@ -52,5 +49,3 @@ namespace Test.DataAccess
         }
     }
 }
-
-

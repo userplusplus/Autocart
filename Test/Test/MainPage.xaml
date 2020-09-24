@@ -8,31 +8,30 @@
         <Label Text="Replace with autocart logo"
            VerticalTextAlignment="Center"
            VerticalOptions="CenterAndExpand"
-           HorizontalOptions="CenterAndExpand"/>
+           HorizontalOptions="CenterAndExpand" />
 
-        <Entry Placeholder="Email" x:Name="emailInput"/>
-        <Entry Placeholder="Password" IsPassword="True" x:Name="passwordInput"/>
+        <Entry Placeholder="Email" x:Name="emailInput" />
+        <Entry Placeholder="Password" IsPassword="True" x:Name="passwordInput" />
         <Grid Margin="5, 5, 5, 5">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="50" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button 
+            <Button
                 Grid.Row="0"
                 Grid.Column="0"
                 Text="Login"
                 BackgroundColor="SkyBlue"
-                Clicked="LoginButtonClicked"/>
-            <Button 
+                Clicked="LoginButtonClicked" />
+            <Button
                 Grid.Row="0"
                 Grid.Column="1"
                 Text="Register"
                 BackgroundColor="LightGray"
-                Clicked="RegisterButtonClicked"/>
+                Clicked="RegisterButtonClicked" />
         </Grid>
     </StackLayout>
-
 </ContentPage>

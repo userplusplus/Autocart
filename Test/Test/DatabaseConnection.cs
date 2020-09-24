@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Test
+﻿namespace Test
 {
     public interface DatabaseConnection
     {
-        //SQLite.SQLiteConnection DbConnection();
-        SQLite.SQLiteAsyncConnection DbConnection();
+        SQLite.SQLiteConnection DbConnection();
+
+        //dont use async SQLite.SQLiteAsyncConnection DbConnection();
     }
 }

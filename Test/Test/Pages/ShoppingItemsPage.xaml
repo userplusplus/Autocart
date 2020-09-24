@@ -6,18 +6,18 @@
             ItemsSource="{Binding Items}"
             CachingStrategy="RecycleElement"
             HasUnevenRows="True">
-            
+
     <!--Built in Cells-->
     <ListView.ItemTemplate>
             <DataTemplate>
-                <ViewCell >
+                <ViewCell>
                     <ViewCell.View>
                         <Grid Padding="5">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="110"/>
+                                <RowDefinition Height="110" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.2*"/>
+                                <ColumnDefinition Width="0.2*" />
                                 <ColumnDefinition Width="0.55*" />
                                 <ColumnDefinition Width="0.25*" />
                             </Grid.ColumnDefinitions>
@@ -36,42 +36,42 @@
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
                                 <Label Grid.Row="0"
                                     Text="{Binding .}"
-                                    FontAttributes="Bold"/>
+                                    FontAttributes="Bold" />
                                 <Label Grid.Row="1"
-                                    Text="Discount: "/>
+                                    Text="Discount: " />
                                 <Label Grid.Row="2"
-                                    Text="Price: "/>
+                                    Text="Price: " />
                                 <Label Grid.Row="3"
-                                    Text="Quantity: "/>
+                                    Text="Quantity: " />
                                 <Label Grid.Row="4"
-                                    Text="Cost: "/>
+                                    Text="Cost: " />
                             </Grid>
 
                             <Button Grid.Column="2"
                                 Text="Edit"
                                 BackgroundColor="YellowGreen"
-                                Margin="2"/>
+                                Margin="2" />
                         </Grid>
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>
     </ListView.ItemTemplate>
-    
+
     <!--Custom View Cells-->
     <!--
     <ListView.ItemTemplate>
       <DataTemplate>
         <ViewCell>
           <StackLayout>
-            <Label Text="{Binding Text}" 
+            <Label Text="{Binding Text}"
                    Style="{DynamicResource ListItemTextStyle}" />
-            <Label Text="{Binding Detail}" 
-                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+            <Label Text="{Binding Detail}"
+                   Style="{DynamicResource ListItemDetailTextStyle}" />
           </StackLayout>
         </ViewCell>
       </DataTemplate>
