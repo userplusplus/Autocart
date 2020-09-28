@@ -55,25 +55,37 @@ namespace Test
 
             try
             {
+                
                 //check for blanks
                 if (password == "" || email == "" || password == null || email == null)
                 {
                     await DisplayAlert("Registration Error", "No input was found for one or more of the fields required.", "OK");
+                    Console.Out.WriteLine("Email: " + email + " Password: " + password + " Error: 1");
                 }
                 //check for bad passwords
                 else if (password.Length <= 6)
                 {
                     await DisplayAlert("Registration Error", "Password needs to be longer than 6 characters long.", "OK");
+                    Console.Out.WriteLine("Email: " + email + " Password: " + password + " Error: 2");
                 }
-                //check for taken email
+                /*check for taken email
                 else if (this.dataAccess.GetUser(email).Email != null)
                 {
                     await DisplayAlert("Registration Error", "This email is already in use, please log in.", "OK");
-                }
+                    Console.Out.WriteLine("Email: " + email + " Password: " + password + " Error: 3");
+                }*/
                 else
                 {
-                    this.dataAccess.AddNewUser(email, password);
-                    await DisplayAlert("Registration Success", "email:" + email + "/npassword:" + password, "OK");
+                    try
+                    {
+                        this.dataAccess.AddNewUser(email, password);
+                        await DisplayAlert("Registration Success", "email:" + email + "/npassword:" + password, "OK");
+                    }
+                    catch
+                    {
+                        await DisplayAlert("Registration Error", "An error has occured accessing the database (Error Code: 1)." + "email:" + email + "/npassword:" + password, "OK");
+                        Console.Out.WriteLine("Email: " + email + " Password: " + password + " Error: 4");
+                    }
                 }
             }
             catch
