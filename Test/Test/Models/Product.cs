@@ -3,19 +3,46 @@
 namespace Test.Models
 {
     [Table("product")]
-    public class Product
+    internal class Product
     {
-        [PrimaryKey, AutoIncrement]
-        [Column("id")]
-        public int Id { get; set; }
+        private int _id;
 
-        [Column("name")]
-        public string Name { get; set; }
+        [PrimaryKey, AutoIncrement, Column("id")]
+        public int Id
+        {
+            get { return _id; }
 
-        [Column("discount")]
-        public decimal Discount { get; set; }
+            set { this._id = value; }
+        }
 
-        [Column("price")]
-        public decimal Price { get; set; }
+        private string _name;
+
+        [NotNull, MaxLength(100), Column("name")]
+        public string Name
+        {
+            get { return _name; }
+
+            set { this._name = value; }
+        }
+
+        private decimal _discount;
+
+        [NotNull, Column("discount")]
+        public decimal Discount
+        {
+            get { return _discount; }
+
+            set { this._discount = value; }
+        }
+
+        private decimal _price;
+
+        [NotNull, Column("price")]
+        public decimal Price
+        {
+            get { return _price; }
+
+            set { this._price = value; }
+        }
     }
 }
