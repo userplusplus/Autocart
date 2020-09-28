@@ -7,7 +7,6 @@
             ItemsSource="{Binding Items}"
             ItemTapped="Handle_ItemTapped"
             CachingStrategy="RecycleElement">
-    
 
     <!--Item Links-->
     <ListView.ItemTemplate>
@@ -15,17 +14,17 @@
             <TextCell Text="{Binding .}" />
         </DataTemplate>
     </ListView.ItemTemplate>
-    
+
     <!--Custom View Cells-->
     <!--
     <ListView.ItemTemplate>
       <DataTemplate>
         <ViewCell>
           <StackLayout>
-            <Label Text="{Binding Text}" 
+            <Label Text="{Binding Text}"
                    Style="{DynamicResource ListItemTextStyle}" />
-            <Label Text="{Binding Detail}" 
-                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+            <Label Text="{Binding Detail}"
+                   Style="{DynamicResource ListItemDetailTextStyle}" />
           </StackLayout>
         </ViewCell>
       </DataTemplate>

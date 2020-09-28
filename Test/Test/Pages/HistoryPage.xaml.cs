@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -26,11 +22,11 @@ namespace Test.Pages
                 "Item 4",
                 "Item 5"
             };
-			
-			MyListView.ItemsSource = Items;
+
+            MyListView.ItemsSource = Items;
         }
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item == null)
                 return;
